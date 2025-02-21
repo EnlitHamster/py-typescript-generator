@@ -1,11 +1,13 @@
 import os
 from pathlib import Path
-from typing import List, Type, Dict, Union
+from typing import List, Optional, Type, Dict, Union
 
 from py2ts_generator.model.model import Model
+from py2ts_generator.model_parser.class_parsers.abstract_class_parser import AbstractClassParser
 from py2ts_generator.model_parser.class_parsers.dataclass_parser import (
     DataclassParser,
 )
+from py2ts_generator.model_parser.class_parsers.sqlalchemy_parser import SQLAlchemyParser
 from py2ts_generator.model_parser.model_parser import (
     ModelParser,
     ModelParserSettings,
@@ -28,11 +30,13 @@ class TypeGenerationPipeline:
         type_overrides: Dict[Type, Type],
         case_format: CaseFormat,
         output_file: Union[str, Path],
+        class_parsers: Optional[List[AbstractClassParser]] = None,
     ):
         self.types = types
         self.type_overrides = type_overrides
         self.case_format = case_format
         self.output_file = output_file
+        self.class_parsers = class_parsers or [DataclassParser(), SQLAlchemyParser()]
 
     def run(self) -> None:
         model = self._parse_model()
