@@ -4,7 +4,9 @@ from typing import List, Self, Type, Dict, Optional
 from py2ts_generator.generation_pipeline.typescript_generation_pipeline import (
     TypeGenerationPipeline,
 )
-from py2ts_generator.model_parser.class_parsers.abstract_class_parser import AbstractClassParser
+from py2ts_generator.model_parser.class_parsers.abstract_class_parser import (
+    AbstractClassParser,
+)
 from py2ts_generator.typescript_model_compiler.typescript_model_compiler import (
     CaseFormat,
 )
@@ -40,7 +42,7 @@ class TypeGenerationPipelineBuilder:
     def to_file(self, path: str | Path) -> Self:
         self._output_file = path
         return self
-    
+
     def with_parsers(self, parsers: List[AbstractClassParser]) -> Self:
         self._class_parsers = parsers
         return self
@@ -49,9 +51,9 @@ class TypeGenerationPipelineBuilder:
         if not self._output_file:
             raise NoOutputFileDefined()
         return TypeGenerationPipeline(
-            self._types, 
-            self._type_overrides, 
-            self._case_format, 
+            self._types,
+            self._type_overrides,
+            self._case_format,
             self._output_file,
             self._class_parsers,
         )

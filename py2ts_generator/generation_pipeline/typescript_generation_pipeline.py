@@ -3,11 +3,15 @@ from pathlib import Path
 from typing import List, Optional, Type, Dict, Union
 
 from py2ts_generator.model.model import Model
-from py2ts_generator.model_parser.class_parsers.abstract_class_parser import AbstractClassParser
+from py2ts_generator.model_parser.class_parsers.abstract_class_parser import (
+    AbstractClassParser,
+)
 from py2ts_generator.model_parser.class_parsers.dataclass_parser import (
     DataclassParser,
 )
-from py2ts_generator.model_parser.class_parsers.sqlalchemy_parser import SQLAlchemyParser
+from py2ts_generator.model_parser.class_parsers.sqlalchemy_parser import (
+    SQLAlchemyParser,
+)
 from py2ts_generator.model_parser.model_parser import (
     ModelParser,
     ModelParserSettings,
