@@ -7,7 +7,7 @@ T = TypeVar("T")
 
 class UnknownTypeError(Exception):
     def __init__(self, type_name: str, *args: object, **kwargs: dict) -> None:
-        """ Exception raised if a type could not be found from a type name.
+        """Exception raised if a type could not be found from a type name.
 
         :param type_name: The type name.
         """
@@ -26,7 +26,7 @@ def safe_unwrap(optional: Optional[T]) -> T:
 
 
 def get_type(type_name: str) -> Optional[Type]:
-    """ Attempts to get the type from its name.
+    """Attempts to get the type from its name.
 
     :param type_name: The type name.
 

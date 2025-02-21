@@ -33,7 +33,7 @@ class DataclassParser(AbstractClassParser):
             field_type = field.type
             if isinstance(field_type, str):
                 typ = get_type(field_type)
-                
+
                 if typ is None:
                     raise UnknownTypeError(field_type)
             elif isinstance(field_type, type):
