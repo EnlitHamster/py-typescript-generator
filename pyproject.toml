@@ -10,6 +10,7 @@ python = ">=3.10"
 ordered-set = "^4.1.0"
 typing-inspect = "^0.8.0"
 case-converter = "^1.1.0"
+sqlalchemy = "^2.0.38"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.3"
