@@ -1,0 +1,51 @@
+name: Check code style
+
+on:
+  pull_request:
+    types: ['ready_for_review', 'synchronize']
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  flake8:
+    if: '! github.event.pull_request.draft'
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        # Run in all these versions of Python
+        python-version: [3.11.9]
+
+    steps:
+      # Checkout the latest code from the repo (and submodule[s])
+      - name: Checkout Module
+        uses: actions/checkout@v4
+
+      # Setup which version of Python to use
+      - name: Set Up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      # Setup which version of Poetry to use
+      - name: Set Up Poetry
+        uses: abatilo/actions-poetry@v3
+        with:
+          poetry-version: latest
+
+      # Define a cache for the virtual environment based on the lock file
+      - name: Check Cache
+        uses: actions/cache@v3
+        with:
+          path: ./.venv
+          key: venv-${{ hashFiles('poetry.lock') }}
+
+      # Install dependencies (won't do much if we had a cache hit)
+      - name: Install Dependencies
+        run: poetry install
+
+      # Run Flake8
+      - name: Run Flake8
+        run: python -m flake8 ./py_typescript_generator
