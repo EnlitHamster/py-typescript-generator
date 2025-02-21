@@ -36,10 +36,8 @@ class DataclassParser(AbstractClassParser):
 
                 if typ is None:
                     raise UnknownTypeError(field_type)
-            elif isinstance(field_type, type):
-                typ = field_type
             else:
-                typ = type(field_type)
+                typ = field_type
 
             py_fields.append(PyField(name=field.name, type=typ))
 
