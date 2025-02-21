@@ -53,4 +53,4 @@ jobs:
 
       # Run Pytest
       - name: Run Pytest
-        run: python -m pytest
+        run: poetry run pytest
