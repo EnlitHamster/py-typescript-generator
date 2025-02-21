@@ -2,7 +2,12 @@ name: Run tests
 
 on:
   pull_request:
-    types: ['ready_for_review', 'synchronize']
+    types:
+      - 'ready_for_review'
+      - 'synchronize'
+      - 'opened'
+    branches:
+      - 'main'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
