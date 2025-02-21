@@ -17,7 +17,6 @@ mypy = "^0.981"
 black = "^22.8.0"
 flake8 = "^5.0.4"
 pytest-html = "^3.1.1"
-typed-ast = "^1.5.4"
 coverage = "^6.4.4"
 bumpversion = "^0.6.0"
 
