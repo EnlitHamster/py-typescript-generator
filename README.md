@@ -1,6 +1,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # py2ts-generator
 
+> [!INFO]
+> This package was originally forked from [Latios96/py-typescript-generator](https://github.com/Latios96/py-typescript-generator) in order to add support for SQLAlchemy 2 models.
+
 `py2ts-generator` is a tool to create TypeScript type definitions from Python classes. 
 
 > Note: Currently, only Python dataclasses are supported, but it's possible to extend this to other sources, like attrs classes or SqlAlchemy models.
