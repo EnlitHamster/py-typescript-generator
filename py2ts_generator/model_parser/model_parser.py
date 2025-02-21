@@ -279,5 +279,5 @@ class ModelParser:
         except AttributeError:
             return ""
         if isinstance(attr, Enum):
-            return attr.name
+            return attr.name  # type: ignore
         return cast(str, attr)

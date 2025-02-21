@@ -27,23 +27,23 @@ class TypeGenerationPipelineBuilder:
         self._output_file: Optional[str | Path] = None
         self._class_parsers: Optional[List[AbstractClassParser]] = None
 
-    def for_types(self, types: List[Type]) -> Self:
+    def for_types(self, types: List[Type]) -> 'TypeGenerationPipelineBuilder':
         self._types = types
         return self
 
-    def with_type_overrides(self, type_overrides: Dict[Type, Type]) -> Self:
+    def with_type_overrides(self, type_overrides: Dict[Type, Type]) -> 'TypeGenerationPipelineBuilder':
         self._type_overrides = type_overrides
         return self
 
-    def convert_field_names_to_camel_case(self) -> Self:
+    def convert_field_names_to_camel_case(self) -> 'TypeGenerationPipelineBuilder':
         self._case_format = CaseFormat.CAMEL_CASE
         return self
 
-    def to_file(self, path: str | Path) -> Self:
+    def to_file(self, path: str | Path) -> 'TypeGenerationPipelineBuilder':
         self._output_file = path
         return self
 
-    def with_parsers(self, parsers: List[AbstractClassParser]) -> Self:
+    def with_parsers(self, parsers: List[AbstractClassParser]) -> 'TypeGenerationPipelineBuilder':
         self._class_parsers = parsers
         return self
 
