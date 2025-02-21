@@ -53,4 +53,4 @@ jobs:
 
       # Run Flake8
       - name: Run Flake8
-        run: poetry run flake8 ./py_typescript_generator
+        run: poetry run flake8 ./py2ts_generator

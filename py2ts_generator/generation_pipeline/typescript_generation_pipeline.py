@@ -2,19 +2,19 @@ import os
 from pathlib import Path
 from typing import List, Type, Dict, Union
 
-from py_typescript_generator.model.model import Model
-from py_typescript_generator.model_parser.class_parsers.dataclass_parser import (
+from py2ts_generator.model.model import Model
+from py2ts_generator.model_parser.class_parsers.dataclass_parser import (
     DataclassParser,
 )
-from py_typescript_generator.model_parser.model_parser import (
+from py2ts_generator.model_parser.model_parser import (
     ModelParser,
     ModelParserSettings,
 )
-from py_typescript_generator.typescript_emitter.typescript_emitter import (
+from py2ts_generator.typescript_emitter.typescript_emitter import (
     TypescriptEmitter,
 )
-from py_typescript_generator.typescript_model_compiler.ts_model import TsModel
-from py_typescript_generator.typescript_model_compiler.typescript_model_compiler import (
+from py2ts_generator.typescript_model_compiler.ts_model import TsModel
+from py2ts_generator.typescript_model_compiler.typescript_model_compiler import (
     CaseFormat,
     TypescriptModelCompiler,
     TypescriptModelCompilerSettings,

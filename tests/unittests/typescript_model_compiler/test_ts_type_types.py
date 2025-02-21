@@ -1,12 +1,12 @@
 import pytest
 
-from py_typescript_generator.typescript_model_compiler.ts_array import TsArray
-from py_typescript_generator.typescript_model_compiler.ts_interface import TsInterface
-from py_typescript_generator.typescript_model_compiler.ts_mapped_type import (
+from py2ts_generator.typescript_model_compiler.ts_array import TsArray
+from py2ts_generator.typescript_model_compiler.ts_interface import TsInterface
+from py2ts_generator.typescript_model_compiler.ts_mapped_type import (
     TsMappedType,
 )
-from py_typescript_generator.typescript_model_compiler.ts_type import TsType
-from py_typescript_generator.typescript_model_compiler.well_known_types import (
+from py2ts_generator.typescript_model_compiler.ts_type import TsType
+from py2ts_generator.typescript_model_compiler.well_known_types import (
     TS_STRING,
     TS_NUMBER,
 )

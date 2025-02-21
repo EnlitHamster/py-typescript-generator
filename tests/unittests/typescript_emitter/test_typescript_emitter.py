@@ -1,11 +1,11 @@
 from typing import List
 
-from py_typescript_generator.typescript_emitter.typescript_emitter import (
+from py2ts_generator.typescript_emitter.typescript_emitter import (
     TypescriptEmitter,
 )
-from py_typescript_generator.typescript_model_compiler.ts_enum import TsEnum
-from py_typescript_generator.typescript_model_compiler.ts_model import TsModel
-from py_typescript_generator.typescript_model_compiler.ts_object_type import (
+from py2ts_generator.typescript_model_compiler.ts_enum import TsEnum
+from py2ts_generator.typescript_model_compiler.ts_model import TsModel
+from py2ts_generator.typescript_model_compiler.ts_object_type import (
     TsObjectType,
     TsBaseType,
 )

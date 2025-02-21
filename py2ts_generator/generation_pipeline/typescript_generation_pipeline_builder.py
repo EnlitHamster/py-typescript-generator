@@ -1,10 +1,10 @@
 from pathlib import Path
 from typing import List, Type, Dict, Optional, Union
 
-from py_typescript_generator.generation_pipeline.typescript_generation_pipeline import (
+from py2ts_generator.generation_pipeline.typescript_generation_pipeline import (
     TypeGenerationPipeline,
 )
-from py_typescript_generator.typescript_model_compiler.typescript_model_compiler import (
+from py2ts_generator.typescript_model_compiler.typescript_model_compiler import (
     CaseFormat,
 )
 

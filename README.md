@@ -1,7 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-# py-typescript-generator
+# py2ts-generator
 
-`py-typescript-generator` is a tool to create TypeScript type definitions from Python classes. 
+`py2ts-generator` is a tool to create TypeScript type definitions from Python classes. 
 
 > Note: Currently, only Python dataclasses are supported, but it's possible to extend this to other sources, like attrs classes or SqlAlchemy models.
 
@@ -30,28 +30,28 @@ interface DemoClass {
     my_dict: { [index: string]: string }
 }
 ```
-`py-typescript-generator` supports basic Python types like `int`, `float`, `str`, `datetime` or `UUID` and collections like `List`, `Set` or `Dict`. `Optional` is also supported.
+`py2ts-generator` supports basic Python types like `int`, `float`, `str`, `datetime` or `UUID` and collections like `List`, `Set` or `Dict`. `Optional` is also supported.
 
 For more details on type mapping, see [Type Mapping](##Type Mapping).
 
 ## Usage
 ### Installation
-You can install `py-typescript-generator` via `pip`, currently only from Github:
+You can install `py2ts-generator` via `pip`, currently only from Github:
 ```shell
-pip install git+https://github.com/Latios96/py-typescript-generator.git@v0.3.1
+pip install git+https://github.com/EnlitHamster/py2ts-generator.git@0.1.0
 ```
 or if you are using poetry:
 ```shell
-poetry add git+ssh://git@github.com:Latios96/py-typescript-generator.git#v0.3.1
+poetry add git+ssh://git@github.com:EnlitHamster/py2ts-generator.git#0.1.0
 ```
 ### Invocation
-`py-typescript-generator` is invoked by a custom Python Script, which is placed in your project. Note that `py-typescript-generator` needs to import your classes, so make sure all your imported dependencies are available when generating your types.
+`py2ts-generator` is invoked by a custom Python Script, which is placed in your project. Note that `py2ts-generator` needs to import your classes, so make sure all your imported dependencies are available when generating your types.
 
 To generate your TypeScript types, pass a list of your classes: 
 
 ```python
 from dataclasses import dataclass
-from py_typescript_generator import TypeGenerationPipelineBuilder
+from py2ts_generator import TypeGenerationPipelineBuilder
 
 @dataclass
 class MyExampleClass:
@@ -80,7 +80,7 @@ TypeGenerationPipelineBuilder() \
     .run()
 ```
 #### CamelCase conversion
-In Python, fields are usually declared in snake_case. However, sometimes they are converted to camelCase in JSON, since this is the convention in JavaScript / TypeScript. `py-typescript-generator` also supports camelCase conversion for fields:
+In Python, fields are usually declared in snake_case. However, sometimes they are converted to camelCase in JSON, since this is the convention in JavaScript / TypeScript. `py2ts-generator` also supports camelCase conversion for fields:
 ```python
 TypeGenerationPipelineBuilder() \
     .for_types([MyExampleClass]) \ 

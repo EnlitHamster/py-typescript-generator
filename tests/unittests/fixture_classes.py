@@ -20,29 +20,29 @@ from uuid import UUID
 import pytest
 from ordered_set import OrderedSet
 
-from py_typescript_generator.model.py_class import (
+from py2ts_generator.model.py_class import (
     PyClass,
     RootTaggedUnionInformation,
     TaggedUnionInformation,
 )
-from py_typescript_generator.model.py_enum import PyEnum, PyEnumValue
-from py_typescript_generator.model.py_field import PyField
-from py_typescript_generator.typescript_model_compiler.ts_array import TsArray
-from py_typescript_generator.typescript_model_compiler.ts_enum import (
+from py2ts_generator.model.py_enum import PyEnum, PyEnumValue
+from py2ts_generator.model.py_field import PyField
+from py2ts_generator.typescript_model_compiler.ts_array import TsArray
+from py2ts_generator.typescript_model_compiler.ts_enum import (
     TsEnum,
     TsEnumValue,
 )
-from py_typescript_generator.typescript_model_compiler.ts_field import TsField
-from py_typescript_generator.typescript_model_compiler.ts_mapped_type import (
+from py2ts_generator.typescript_model_compiler.ts_field import TsField
+from py2ts_generator.typescript_model_compiler.ts_mapped_type import (
     TsMappedType,
 )
-from py_typescript_generator.typescript_model_compiler.ts_object_type import (
+from py2ts_generator.typescript_model_compiler.ts_object_type import (
     TsObjectType,
     TsDiscriminator,
     TsUnionType,
 )
-from py_typescript_generator.typescript_model_compiler.ts_type import TsType
-from py_typescript_generator.typescript_model_compiler.well_known_types import (
+from py2ts_generator.typescript_model_compiler.ts_type import TsType
+from py2ts_generator.typescript_model_compiler.well_known_types import (
     TS_NUMBER,
     TS_ANY,
     TS_STRING,

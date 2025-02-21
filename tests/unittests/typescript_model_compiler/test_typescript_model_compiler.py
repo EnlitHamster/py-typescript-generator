@@ -4,26 +4,26 @@ from typing import Dict
 import pytest
 from ordered_set import OrderedSet
 
-from py_typescript_generator.model.model import Model
-from py_typescript_generator.model.py_class import PyClass
-from py_typescript_generator.model.py_enum import PyEnum, PyEnumValue
-from py_typescript_generator.model.py_field import PyField
-from py_typescript_generator.typescript_model_compiler.ts_field import TsField
-from py_typescript_generator.typescript_model_compiler.ts_model import TsModel
-from py_typescript_generator.typescript_model_compiler.ts_object_type import (
+from py2ts_generator.model.model import Model
+from py2ts_generator.model.py_class import PyClass
+from py2ts_generator.model.py_enum import PyEnum, PyEnumValue
+from py2ts_generator.model.py_field import PyField
+from py2ts_generator.typescript_model_compiler.ts_field import TsField
+from py2ts_generator.typescript_model_compiler.ts_model import TsModel
+from py2ts_generator.typescript_model_compiler.ts_object_type import (
     TsObjectType,
     TsDiscriminator,
     TsUnionType,
 )
-from py_typescript_generator.typescript_model_compiler.ts_type import TsType
-from py_typescript_generator.typescript_model_compiler.typescript_model_compiler import (
+from py2ts_generator.typescript_model_compiler.ts_type import TsType
+from py2ts_generator.typescript_model_compiler.typescript_model_compiler import (
     TypescriptModelCompiler,
     UnsupportedKeyTypeForMappedType,
     UnsupportedEnumValue,
     TypescriptModelCompilerSettings,
     CaseFormat,
 )
-from py_typescript_generator.typescript_model_compiler.well_known_types import TS_STRING
+from py2ts_generator.typescript_model_compiler.well_known_types import TS_STRING
 from tests.unittests.fixture_classes import ClassFixture, EnumFixture
 
 

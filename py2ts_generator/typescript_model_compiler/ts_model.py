@@ -3,8 +3,8 @@ from typing import List
 
 from ordered_set import OrderedSet
 
-from py_typescript_generator.typescript_model_compiler.ts_enum import TsEnum
-from py_typescript_generator.typescript_model_compiler.ts_object_type import (
+from py2ts_generator.typescript_model_compiler.ts_enum import TsEnum
+from py2ts_generator.typescript_model_compiler.ts_object_type import (
     TsBaseType,
 )
 

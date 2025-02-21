@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import Type, Tuple, Optional, FrozenSet
 
-from py_typescript_generator.model.py_field import PyField
+from py2ts_generator.model.py_field import PyField
 
 
 @dataclass(frozen=True)

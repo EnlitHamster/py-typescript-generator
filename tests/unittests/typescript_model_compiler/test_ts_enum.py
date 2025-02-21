@@ -1,4 +1,4 @@
-from py_typescript_generator.typescript_model_compiler.ts_enum import TsEnumValue
+from py2ts_generator.typescript_model_compiler.ts_enum import TsEnumValue
 
 
 def test_format_string_value():

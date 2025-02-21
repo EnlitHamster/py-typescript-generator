@@ -2,8 +2,8 @@ from typing import Type
 
 import pytest
 
-from py_typescript_generator.model.py_class import PyClass
-from py_typescript_generator.model_parser.class_parsers.abstract_class_parser import (
+from py2ts_generator.model.py_class import PyClass
+from py2ts_generator.model_parser.class_parsers.abstract_class_parser import (
     AbstractClassParser,
 )
 from tests.unittests.fixture_classes import (

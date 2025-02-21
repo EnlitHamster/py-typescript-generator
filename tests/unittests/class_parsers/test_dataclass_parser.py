@@ -3,9 +3,9 @@ from typing import List, Dict
 
 import pytest
 
-from py_typescript_generator.model.py_class import PyClass
-from py_typescript_generator.model.py_field import PyField
-from py_typescript_generator.model_parser.class_parsers.dataclass_parser import (
+from py2ts_generator.model.py_class import PyClass
+from py2ts_generator.model.py_field import PyField
+from py2ts_generator.model_parser.class_parsers.dataclass_parser import (
     DataclassParser,
     NotADataclassException,
 )

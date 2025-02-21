@@ -9,27 +9,27 @@ from ordered_set import OrderedSet
 from typing_extensions import get_args
 from typing_inspect import is_optional_type, get_origin  # type: ignore
 
-from py_typescript_generator.model.model import Model
-from py_typescript_generator.model.py_class import PyClass, RootTaggedUnionInformation
-from py_typescript_generator.model.py_enum import PyEnum
-from py_typescript_generator.typescript_model_compiler.ts_array import TsArray
-from py_typescript_generator.typescript_model_compiler.ts_enum import (
+from py2ts_generator.model.model import Model
+from py2ts_generator.model.py_class import PyClass, RootTaggedUnionInformation
+from py2ts_generator.model.py_enum import PyEnum
+from py2ts_generator.typescript_model_compiler.ts_array import TsArray
+from py2ts_generator.typescript_model_compiler.ts_enum import (
     TsEnum,
     TsEnumValue,
 )
-from py_typescript_generator.typescript_model_compiler.ts_field import TsField
-from py_typescript_generator.typescript_model_compiler.ts_mapped_type import (
+from py2ts_generator.typescript_model_compiler.ts_field import TsField
+from py2ts_generator.typescript_model_compiler.ts_mapped_type import (
     TsMappedType,
 )
-from py_typescript_generator.typescript_model_compiler.ts_model import TsModel
-from py_typescript_generator.typescript_model_compiler.ts_object_type import (
+from py2ts_generator.typescript_model_compiler.ts_model import TsModel
+from py2ts_generator.typescript_model_compiler.ts_object_type import (
     TsObjectType,
     TsDiscriminator,
     TsBaseType,
     TsUnionType,
 )
-from py_typescript_generator.typescript_model_compiler.ts_type import TsType
-from py_typescript_generator.typescript_model_compiler.well_known_types import (
+from py2ts_generator.typescript_model_compiler.ts_type import TsType
+from py2ts_generator.typescript_model_compiler.well_known_types import (
     TS_NUMBER,
     TS_STRING,
     TS_BOOLEAN,
