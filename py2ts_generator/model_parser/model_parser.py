@@ -24,17 +24,17 @@ from ordered_set import OrderedSet
 # Note: this can be removed once support for Python 3.7 is dropped
 from typing_inspect import get_args, get_origin, is_optional_type  # type: ignore
 
-from py_typescript_generator.model.model import Model
-from py_typescript_generator.model.py_class import (
+from py2ts_generator.model.model import Model
+from py2ts_generator.model.py_class import (
     PyClass,
     RootTaggedUnionInformation,
     TaggedUnionInformation,
 )
-from py_typescript_generator.model.py_enum import PyEnum, PyEnumValue
-from py_typescript_generator.model_parser.class_parsers.abstract_class_parser import (
+from py2ts_generator.model.py_enum import PyEnum, PyEnumValue
+from py2ts_generator.model_parser.class_parsers.abstract_class_parser import (
     AbstractClassParser,
 )
-from py_typescript_generator.typing_utils.typing_utils import (
+from py2ts_generator.typing_utils.typing_utils import (
     get_wrapped_type_from_optional,
     safe_unwrap,
 )

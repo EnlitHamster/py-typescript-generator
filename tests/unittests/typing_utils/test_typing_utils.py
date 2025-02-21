@@ -1,6 +1,6 @@
 from typing import Optional
 
-from py_typescript_generator.typing_utils.typing_utils import (
+from py2ts_generator.typing_utils.typing_utils import (
     get_wrapped_type_from_optional,
 )
 

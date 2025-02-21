@@ -3,8 +3,8 @@ from typing import List
 
 from ordered_set import OrderedSet
 
-from py_typescript_generator.model.py_class import PyClass
-from py_typescript_generator.model.py_enum import PyEnum
+from py2ts_generator.model.py_class import PyClass
+from py2ts_generator.model.py_enum import PyEnum
 
 
 @dataclass

@@ -1,6 +1,6 @@
 from typing import Type
 
-from py_typescript_generator.model.py_class import PyClass
+from py2ts_generator.model.py_class import PyClass
 
 
 class AbstractClassParser:

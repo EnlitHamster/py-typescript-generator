@@ -1,10 +1,10 @@
 import pytest
 
-from py_typescript_generator.generation_pipeline.typescript_generation_pipeline_builder import (
+from py2ts_generator.generation_pipeline.typescript_generation_pipeline_builder import (
     TypeGenerationPipelineBuilder,
     NoOutputFileDefined,
 )
-from py_typescript_generator.typescript_model_compiler.typescript_model_compiler import (
+from py2ts_generator.typescript_model_compiler.typescript_model_compiler import (
     CaseFormat,
 )
 

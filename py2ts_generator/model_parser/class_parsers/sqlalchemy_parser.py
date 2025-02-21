@@ -4,12 +4,12 @@ from sqlalchemy import Column
 import sqlalchemy.inspection
 from sqlalchemy.sql.type_api import TypeEngine
 
-from py_typescript_generator.model.py_class import PyClass
-from py_typescript_generator.model.py_field import PyField
-from py_typescript_generator.model_parser.class_parsers.abstract_class_parser import (
+from py2ts_generator.model.py_class import PyClass
+from py2ts_generator.model.py_field import PyField
+from py2ts_generator.model_parser.class_parsers.abstract_class_parser import (
     AbstractClassParser,
 )
-from py_typescript_generator.typing_utils.typing_utils import UnknownTypeError
+from py2ts_generator.typing_utils.typing_utils import UnknownTypeError
 
 
 class NotASQLAlchemyModelException(RuntimeError):

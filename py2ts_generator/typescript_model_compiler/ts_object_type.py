@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import Tuple, Optional
 
-from py_typescript_generator.typescript_model_compiler.ts_field import TsField
+from py2ts_generator.typescript_model_compiler.ts_field import TsField
 
 
 @dataclass(frozen=True)

@@ -53,4 +53,4 @@ jobs:
 
       # Run mypy.
       - name: Run MyPy
-        run: poetry run mypy -m py_typescript_generator
+        run: poetry run mypy -m py2ts_generator

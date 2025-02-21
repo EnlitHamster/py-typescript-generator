@@ -1,6 +1,6 @@
-from py_typescript_generator.typescript_model_compiler.ts_field import TsField
-from py_typescript_generator.typescript_model_compiler.ts_model import TsModel
-from py_typescript_generator.typescript_model_compiler.ts_object_type import (
+from py2ts_generator.typescript_model_compiler.ts_field import TsField
+from py2ts_generator.typescript_model_compiler.ts_model import TsModel
+from py2ts_generator.typescript_model_compiler.ts_object_type import (
     TsObjectType,
     TsBaseType,
     TsUnionType,

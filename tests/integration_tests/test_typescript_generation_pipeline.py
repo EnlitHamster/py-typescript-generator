@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from py_typescript_generator.generation_pipeline.typescript_generation_pipeline_builder import (
+from py2ts_generator.generation_pipeline.typescript_generation_pipeline_builder import (
     TypeGenerationPipelineBuilder,
 )
 
