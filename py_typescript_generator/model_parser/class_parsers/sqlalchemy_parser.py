@@ -30,20 +30,20 @@ class SQLAlchemyParser(AbstractClassParser):
     def parse(self, cls: Type) -> PyClass:
         if not self.accepts_class(cls):
             raise NotASQLAlchemyModelException(cls)
-        
+
         fields: List[PyField] = []
         inspector = sqlalchemy.inspection.inspect(cls)
 
         for col in inspector.columns:
             if not isinstance(col, Column):
                 raise UnknownTypeError(type(col).__name__)
-            
+
             typ: Type
             if isinstance(col.type, TypeEngine):
                 typ = col.type.python_type
             else:
                 typ = col.type
-            
+
             fields.append(PyField(name=col.name, type=typ))
 
         return PyClass(name=cls.__name__, type=cls, fields=tuple(fields))
