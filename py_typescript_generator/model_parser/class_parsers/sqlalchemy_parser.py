@@ -1,5 +1,4 @@
-from dataclasses import fields
-from typing import List, Optional, Type
+from typing import List, Type
 
 from sqlalchemy import Column
 import sqlalchemy.inspection
@@ -10,7 +9,7 @@ from py_typescript_generator.model.py_field import PyField
 from py_typescript_generator.model_parser.class_parsers.abstract_class_parser import (
     AbstractClassParser,
 )
-from py_typescript_generator.typing_utils.typing_utils import UnknownTypeError, get_type
+from py_typescript_generator.typing_utils.typing_utils import UnknownTypeError
 
 
 class NotASQLAlchemyModelException(RuntimeError):
@@ -36,7 +35,8 @@ class SQLAlchemyParser(AbstractClassParser):
         inspector = sqlalchemy.inspection.inspect(cls)
 
         for col in inspector.columns:
-            assert isinstance(col, Column)
+            if not isinstance(col, Column):
+                raise UnknownTypeError(type(col).__name__)
             
             typ: Type
             if isinstance(col.type, TypeEngine):
