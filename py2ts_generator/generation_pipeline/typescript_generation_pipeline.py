@@ -51,7 +51,7 @@ class TypeGenerationPipeline:
     def _parse_model(self) -> Model:
         model_parser = ModelParser(
             self.types,
-            [DataclassParser()],
+            self.class_parsers,
             ModelParserSettings(type_mapping_overrides=self.type_overrides),
         )
         model = model_parser.parse()
